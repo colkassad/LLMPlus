@@ -4,18 +4,18 @@ from ..Embeddings.base_embeddings import BaseEmbeddingsToolkit
 from .base_tool import BaseTool
 from typing import Iterator, List, Dict, Any, Optional, Union, Literal, Type
 
-WEB_SEARCH_TOOL_DESCRIPTION = """This tool is for doing searches on the internet for facts or most updated information via a search engine.
-Input of this tool should be a search query. 
-Output of this tool is the answer of your input question."""
+WEB_SEARCH_TOOL_DESCRIPTION = """This tool searches the internet for facts or current information via a search engine.
+Input of this tool is a search query. 
+Output of this tool is the answer to your input question."""
 
-QUERY_GENERATION_SYS_RPOMPT = """You are an AI assistant who is analysing the conversation you are having with the user. You need to use a search engine to search for the most relevant information that can help you to give the user the most accurate and coherent respond. The user is asking you to generate the most appropriate search query for the latest user request.
+QUERY_GENERATION_SYS_RPOMPT = """You are an AI assistant who is analysing the conversation you are having with the user. You shall use a search engine to find the most relevant information that can help you give the user the most accurate and coherent response. The user is asking you to generate the most appropriate search query for the latest user request.
 
-Here are the most recent conversations you have with the user:
+Here are the most recent conversations you have had with the user:
 """
 
-SEARCH_RESPONSE_SYS_RPOMPT = """You are a helpful AI assistant having a conversation with a user. You have just used a search engine to get some relevant information that might help you to respond to the user's latest request. Here are some relevant chunks of contents that you found with the search engine. Use them to respond to the users if they are useful.
+SEARCH_RESPONSE_SYS_RPOMPT = """You are a helpful AI assistant having a conversation with a user. You have just used a search engine to get some relevant information that might help you to respond to the user's latest request. Here are some relevant chunks of content that you found with the search engine. Use them to respond to the user if they are useful.
 
-Relevant chunks of contents:
+Relevant chunks of content:
 
 """
 
